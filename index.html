@@ -14,7 +14,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(270deg, orange, yellow, green, blue, indigo, violet,);
+      background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
       background-size: 1400% 1400%;
       animation: backgroundMove 20s ease infinite;
       overflow: hidden;
@@ -34,7 +34,7 @@
       border: 8px solid transparent;
       border-radius: 20px;
       position: relative;
-      animation: rainbowBorder 5s linear infinite, neonGlow 2s ease-in-out infinite alternate;
+      animation: rainbowBorder 15s linear infinite, neonGlow 3s ease-in-out infinite alternate;
       text-align: center;
       background: rgba(255,255,255,0.1);
       backdrop-filter: blur(10px);
@@ -64,21 +64,23 @@
 
     /* Border rainbow color animation */
     @keyframes rainbowBorder {
+      0% { border-color: red; }
       14% { border-color: orange; }
       28% { border-color: yellow; }
       42% { border-color: green; }
       57% { border-color: blue; }
       71% { border-color: indigo; }
       85% { border-color: violet; }
+      100% { border-color: red; }
     }
 
     /* Neon glow animation */
     @keyframes neonGlow {
       0% {
-        box-shadow: 0 0 20px orange, 0 0 30px yellow, 0 0 40px green, 0 0 50px blue, 0 0 60px indigo, 0 0 70px violet;
+        box-shadow: 0 0 10px red, 0 0 20px orange, 0 0 30px yellow, 0 0 40px green, 0 0 50px blue, 0 0 60px indigo, 0 0 70px violet;
       }
       100% {
-        box-shadow: 0 0 20px violet, 0 0 30px indigo, 0 0 40px blue, 0 0 50px green, 0 0 60px yellow, 0 0 70px orange;
+        box-shadow: 0 0 20px violet, 0 0 30px indigo, 0 0 40px blue, 0 0 50px green, 0 0 60px yellow, 0 0 70px orange, 0 0 80px red;
       }
     }
   </style>
@@ -86,9 +88,9 @@
 <body>
   <div class="content">
     <div class="wrapper-1">
-      <h1>Happy Birthday Prem</h1>
+      <h1>Thank You Sheetal 😊</h1>
       <div class="footer-like">
-        <p>Made by Samir</p>
+        <p>Made with ❤️</p>
       </div>
     </div>
   </div>
