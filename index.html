@@ -18,11 +18,13 @@
       background-size: 1400% 1400%;
       animation: backgroundMove 20s ease infinite;
       overflow: hidden;
+      flex-direction: column;
     }
     .content {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 20px;
       padding: 40px;
@@ -82,7 +84,6 @@
       }
     }
 
-    /* Button Styles */
     .show-image-btn {
       margin-top: 20px;
       padding: 10px 30px;
@@ -100,11 +101,18 @@
       transform: scale(1.05);
     }
 
-    /* Hidden Image */
     #imageContainer {
       display: none;
       text-align: center;
-      margin-top: 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+    #imageContainer h2 {
+      color: #ffffff;
+      font-size: 2em;
+      margin-bottom: 20px;
+      font-family: 'Source Sans Pro', sans-serif;
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff;
     }
     #imageContainer img {
       max-width: 80%;
@@ -114,28 +122,28 @@
   </style>
 </head>
 <body>
-  <div class="content">
+
+  <div class="content" id="mainContent">
     <div class="wrapper-1">
       <h1>Happy Birthday Prem</h1>
       <div class="footer-like">
         <p>Made by Samir❤️</p>
       </div>
-      <!-- Button to Show Image -->
-      <button class="show-image-btn" onclick="showImage()">Show Image</button>
-
-      <!-- Hidden Image -->
-      <div id="imageContainer">
-        <img src="https://via.placeholder.com/400x300.png?text=Happy+Birthday+Image" alt="Happy Birthday Image">
-      </div>
+      <button class="show-image-btn" onclick="showGif()">Show Surprise</button>
     </div>
   </div>
 
-  <!-- JavaScript to Show Image -->
+  <div id="imageContainer">
+    <h2>After 18+ Prem</h2>
+    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2VpaTRjZ3NtM2xwZmFqcWdwc25vc3VkZHN6aW13MnFsN3U0aXhvaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GzDnxxT57oo1XZ0NAJ/giphy.gif">
+  </div>
+
   <script>
- function showImage(https://www.google.com/imgres?q=fuck%20you&imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-vector%2Frealistic-hand-drawn-fuck-you-symbol_23-2148684365.jpg%3Fsemt%3Dais_hybrid%26w%3D740&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Ffuck-you-sign&docid=e4cIB8QU7_5ZaM&tbnid=H6NX9WnhPUkd_M&vet=12ahUKEwjv7ee0oPaMAxXzafUHHUEBKIsQM3oECGYQAA..i&w=740&h=740&hcb=2&ved=2ahUKEwjv7ee0oPaMAxXzafUHHUEBKIsQM3oECGYQAA)      // Hide content and show image
-      document.querySelector('.content').style.display = 'none';
-      document.getElementById('imageContainer').style.display = 'block';
+    function showGif() {
+      document.getElementById('mainContent').style.display = 'none';
+      document.getElementById('imageContainer').style.display = 'flex';
     }
   </script>
+
 </body>
 </html>
