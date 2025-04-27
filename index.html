@@ -12,13 +12,13 @@
     body {
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       background: linear-gradient(270deg, orange, yellow, green, blue, indigo, violet, orange);
       background-size: 1400% 1400%;
       animation: backgroundMove 20s ease infinite;
       overflow: hidden;
-      flex-direction: column;
     }
     .content {
       display: flex;
@@ -48,42 +48,6 @@
       text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
       margin-bottom: 20px;
     }
-    .footer-like {
-      margin-top: 20px;
-    }
-    .footer-like p {
-      color: #fff;
-      font-family: 'Source Sans Pro', sans-serif;
-      font-size: 1em;
-      letter-spacing: 1px;
-    }
-    /* Background smooth moving */
-    @keyframes backgroundMove {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-
-    /* Border rainbow color animation */
-    @keyframes rainbowBorder {
-      0% { border-color: orange; }
-      20% { border-color: yellow; }
-      40% { border-color: green; }
-      60% { border-color: blue; }
-      80% { border-color: indigo; }
-      100% { border-color: violet; }
-    }
-
-    /* Neon glow animation */
-    @keyframes neonGlow {
-      0% {
-        box-shadow: 0 0 10px orange, 0 0 20px yellow, 0 0 30px green, 0 0 40px blue, 0 0 50px indigo, 0 0 60px violet;
-      }
-      100% {
-        box-shadow: 0 0 20px violet, 0 0 30px indigo, 0 0 40px blue, 0 0 50px green, 0 0 60px yellow, 0 0 70px orange;
-      }
-    }
-
     .show-image-btn {
       margin-top: 20px;
       padding: 10px 30px;
@@ -100,7 +64,6 @@
       background-color: #4178f0;
       transform: scale(1.05);
     }
-
     #imageContainer {
       display: none;
       text-align: center;
@@ -119,6 +82,37 @@
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     }
+    footer {
+      margin: 20px 0;
+      font-family: 'Source Sans Pro', sans-serif;
+      color: #fff;
+      font-size: 1em;
+      text-align: center;
+    }
+    /* Background smooth moving */
+    @keyframes backgroundMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    /* Border rainbow color animation */
+    @keyframes rainbowBorder {
+      0% { border-color: orange; }
+      20% { border-color: yellow; }
+      40% { border-color: green; }
+      60% { border-color: blue; }
+      80% { border-color: indigo; }
+      100% { border-color: violet; }
+    }
+    /* Neon glow animation */
+    @keyframes neonGlow {
+      0% {
+        box-shadow: 0 0 10px orange, 0 0 20px yellow, 0 0 30px green, 0 0 40px blue, 0 0 50px indigo, 0 0 60px violet;
+      }
+      100% {
+        box-shadow: 0 0 20px violet, 0 0 30px indigo, 0 0 40px blue, 0 0 50px green, 0 0 60px yellow, 0 0 70px orange;
+      }
+    }
   </style>
 </head>
 <body>
@@ -126,9 +120,6 @@
   <div class="content" id="mainContent">
     <div class="wrapper-1">
       <h1>Happy Birthday Prem</h1>
-     <footer>
-    Made by Samir ❤️
-  </footer>
       <button class="show-image-btn" onclick="showGif()">Show Surprise</button>
     </div>
   </div>
@@ -137,6 +128,10 @@
     <h2>After 18+ Prem</h2>
     <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2VpaTRjZ3NtM2xwZmFqcWdwc25vc3VkZHN6aW13MnFsN3U0aXhvaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GzDnxxT57oo1XZ0NAJ/giphy.gif">
   </div>
+
+  <footer>
+    
+  </footer>
 
   <script>
     function showGif() {
